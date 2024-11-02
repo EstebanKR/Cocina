@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cocina Conciente</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="Script.js"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocina Conciente</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="IMG/iconsinfondo.png">
+    <script src="script.js" defer></script> <!-- Asegúrate de que el script se llama correctamente -->
 </head>
 <body>
+    <h1>Inicia sesión para acceder a tus recetas favoritas</h1>
+    
+    <form id="loginForm">
+        <label for="Numero1">Número de teléfono:</label>
+        <input type="text" id="Numero1" name="Numero1" required><br><br>
 
-  <h1>Inicia sesión para acceder a tus recetas favoritas</h1>
-  
-  <form id="loginForm">
-    <label for="Numero">Numero de telefono:</label>
-    <input type="text" id="Numero" name="Numero"><br><br>
+        <label for="contraseña1">Contraseña:</label>
+        <input type="password" id="contraseña1" name="contraseña" required><br><br>
 
-    <label for="contraseña">Contraseña:</label>
-    <input type="password" id="contraseña" name="contraseña">
+        <p id="errorMensajeLogin"></p> <!-- Mensaje de error específico para el inicio de sesión -->
+        <button type="submit">Iniciar sesión</button>
+    </form>
 
-    <p id="errorMensaje"></p>
-    <button type="submit">Iniciar sesión</button>
-  </form>
-
-  <!-- Enlace a la página de registro -->
-  <p class="register">¿No tienes una cuenta? <a href="Index.html">Regístrate aquí</a></p>
-
+    <p class="register">¿No tienes una cuenta? <a href="Index.html">Regístrate aquí</a></p>
 </body>
 </html>
