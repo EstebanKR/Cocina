@@ -1,33 +1,717 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cocina Conciente</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="IMG/iconsinfondo.png">
-    <script src="Script.js" defer></script> <!-- Asegúrate de que el nombre del archivo sea correcto -->
-</head>
-<body>
-    <h1>Regístrate y encuentra tus recetas favoritas</h1>
-    <form id="registroForm">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required><br><br>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cocina Consciente</title>
+        <link rel="icon" href="img/logo.jpeg">
+        <link 
+            rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer" 
+        />
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <span class="logo">
+                <a href="/">Cocina Consciente</a>
+            </span>
 
-        <label for="Numero">Número de teléfono:</label>
-        <input type="text" id="NumeroRegistro" name="Numero" required><br><br>
+            <nav class="navigation-header">
+                <a href="index.html">Inicio</a>
+                <a href="#Categorias">Recetas</a>
+                <a href="https://chat.whatsapp.com/Ge5jCNPO5xG0e97r2uI8nM">Comunidad</a>
+                <a href="https://chat.whatsapp.com/EEtCfvVUCaT5TeyKlE0v45">Contacto</a>
+                <a href="html/nosotros.html">Nosotros</a>
+            </nav>
 
-        <label for="correo">Correo electrónico:</label>
-        <input type="email" id="correo" name="correo" required><br><br> 
+            <ul class="social-links">
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://chat.whatsapp.com/Ge5jCNPO5xG0e97r2uI8nM"><i class="fa-brands fa-whatsapp"></i></a></li>
+            </ul>
 
-        <label for="contraseña">Contraseña:</label>
-        <input type="password" id="contraseña" name="contraseña" required><br><br>
+            <button class="btn-menu-responsive"> 
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
 
-        <button type="submit">Registrarse</button>
-        <p id="errorMensajeRegistro"></p> <!-- Mensaje de error específico para el registro -->
-    </form>
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-close">
+                    <i class="fa-solid fa-x"></i>
+                </div>
+                <span class="logo">
+                    <a href="/">Cocina Consciente</a>
+                </span>
+                <nav class="navigation-mobile">
+                    <a href="index.html">Inicio</a>
+                    <a href="#Categorias">Recetas</a>
+                    <a href="comunidad.html">Comunidad</a>
+                    <a href="https://chat.whatsapp.com/EEtCfvVUCaT5TeyKlE0v45">Contacto</a>
+                    <a href="html/nosotros.html">Nosotros</a>
+                    <a href="index.php">Cerrar Sesión</a>
+                    <a href=""></a>
+                </nav>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://chat.whatsapp.com/Ge5jCNPO5xG0e97r2uI8nM"><i class="fa-brands fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+        </header>
 
-    <p class="Login">¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
-</body> 
+        <section class="container section-banner-hero">
+            <div class="content">  
+                <span class="badge-hot-repices">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                    Recetas Calientes
+                </span>  
+                <h1>Hamburguesa de Lentejas con Pan de Masa Madre</h1>
+                <p>Deliciosa y perfecta para reducir el impacto ambiental.</p>
+
+                <div class="badges">
+                    <span><i class="fa-solid fa-clock"></i> 30 minutos</span>
+                    <span><i class="fa-solid fa-utensils"></i> Almuerzos</span>
+                </div>
+                <a href="#Categorias">
+                <button>Ver Recetas <i class="fa-solid fa-circle-play"></i></button>
+                </a>
+            </div>
+
+            <div class="container-img">
+                <img src="img/img-banner-hero.webp" alt="Imagen Banner" style="max-width: 80%; max-height: 75%"/>
+            </div>
+        </section>
+
+        <section id="Categorias">
+        <section class ="container section-categories">
+            <div class="header">
+                <h2>Categorías</h2>
+
+                <a href="#" class="btn-all-categories">
+                    Ver todas las categorías
+                </a>
+            </div>
+        </section>
+
+            <div class="list-card-categories">
+                <div class="card-category breakfast">
+                    <img src="img/desayuno.png" alt="Icono Desayuno">
+                    <p>Desayuno</p>
+                </div>
+                <div class="card-category vegan">
+                    <img src="img/vegano.png" alt="Icono Vegano">
+                    <p>Vegano</p>
+                </div>
+                <div class="card-category desert">
+                    <img src="img/postre.png" alt="Icono Postres">
+                    <p>Postre</p>
+                </div>
+                <div class="card-category salad">
+                    <img src="img/ensalada.png" alt="Icono Ensaladas">
+                    <p>Ensalada</p>
+                </div>
+                <div class="card-category lunch">
+                    <img src="img/almuerzo.png" alt="Icono Almuerzos">
+                    <p>Almuerzo</p>
+                </div>
+            </div>
+        </section>   
+
+       <main class="container">
+        <h2>Recetas sencillas y sabrosas</h2>
+        <p>
+            Estas recetas no solo son fáciles de hacer, sino que también priorizan ingredientes que tienen un menor impacto ambiental, 
+            alineándose con la filosofía de Cocina Consciente para promover la salud y la sostenibilidad.
+        </p>
+
+        <span class="category">
+            <i class="fa-solid fa-utensils"></i>
+
+        </span>
+
+        <div class="list-card-recipes">
+           <div class="card-recipes">
+				<div class="container-img">
+					<div>
+						<!-- la imagen con un enlace <a> para volverlo boton -->
+						<a href="html/Bg.html">
+							<img src="img/garvanzos.png" alt="Imagen Receta">
+						</a>
+					</div>
+
+					<p></p>
+					<button class="btn-favorite">
+						<i class="fa-solid fa-heart"></i> 
+					</button>
+				</div>
+				<div class="content">
+					<h3>
+						Bowl de Garbanzos al Curry 
+					</h3>
+					<div class="footer">
+						<span class="time">
+							<i class="fa-solid fa-clock"></i>
+							20 minutos
+						</span>
+						<span class="category">
+							<i class="fa-solid fa-utensils"></i>
+							Almuerzo
+						</span>
+					</div>
+				</div>
+			</div>
+
+
+            <div class="card-recipes">
+                <div class="container-img">
+					<a href="html/EQV.html">
+                    <img src="img/quinoa.png" alt="Imagen Receta">
+					</a>
+                    <p></p>
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="content">
+                    <h3>
+                        Ensalada de Quinoa y Verduras Asadas
+                    </h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            35 minutos
+                        </span>
+                        <span class="category">
+                            <i class="fa-solid fa-utensils"></i>
+                            Ensalada
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-recipes">
+                <div class="container-img">
+					<a href="html/tcf.html">
+                    <img src="img/tacos.png" alt="Imagen Receta">
+					</a>
+                    <p></p>
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="content">
+                    <h3>
+                        Tacos de Champiñones y Frijoles Negros
+                    </h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+                        </span>
+                        <span class="category">
+                            <i class="fa-solid fa-utensils"></i>
+                            Almuerzo
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-recipes">
+                <div class="container-img">
+					<a href="html/SLR.html">
+                    <img src="img/sopadelentejas.png" alt="Imagen Receta">
+					</a>
+                    <p></p>
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="content">
+                    <h3>
+                        Sopa de Lentejas Rojas
+                    </h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+                        </span>
+                        <span class="category">
+                            <i class="fa-solid fa-utensils"></i>
+                            Almuerzo
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-recipes">
+                <div class="container-img">
+					<a href="html/pp.html">
+                    <img src="img/pastapesto.png" alt="Imagen Receta">
+					</a>
+                    <p></p>
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="content">
+                    <h3>
+                        Pasta Integral con Pesto de Espinacas
+                    </h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            20 minutos
+                        </span>
+                        <span class="category">
+                            <i class="fa-solid fa-utensils"></i>
+                            Vegano
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-recipes">
+                <div class="container-img">
+					<a href="html/bv.html">
+                    <img src="img/batido.png" alt="Imagen Receta">
+					</a>
+                    <p></p>
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="content">
+                    <h3>
+                        Batido Verde de Espinacas y Plátano
+                    </h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            5 minutos
+                        </span>
+                        <span class="category">
+                            <i class="fa-solid fa-utensils"></i>
+                            Desayuno  
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-recipes">
+                <div class="container-img">
+					<a href="html/rcc.html">
+                    <img src="img/risoto.png" alt="Imagen Receta">
+					</a>
+                    <p></p>
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="content">
+                    <h3>
+                        Risotto de Calabaza y Champiñones
+                    </h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            40 minutos
+                        </span>
+                        <span class="category">
+                            <i class="fa-solid fa-utensils"></i>
+                            Almuerzo
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-recipes">
+                <div class="container-img">
+					<a href="html/tma.html">
+                    <img src="img/dulce.png" alt="Imagen Receta">
+					</a>
+					<p></p>
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="content">
+                    <h3>
+                        Tarta de Manzana y Almendras con Base de Avena Integral
+                    </h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            60 minutos
+                        </span>
+                        <span class="category">
+                            <i class="fa-solid fa-utensils"></i>
+                            Postre
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-recipes">
+                <div class="container-img">
+					<a href="html/mac.html">
+                    <img src="img/mousse.png" alt="Imagen Receta">
+					</a>
+					<p></p>
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="content">
+                    <h3>
+                        Mousse de Aguacate y Cacao
+                    </h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            75 minutos
+                        </span>
+                        <span class="category">
+                            <i class="fa-solid fa-utensils"></i>
+                            Postre
+                        </span>
+                    </div>
+                </div>
+            </div>
+ 
+        </div>
+
+        <div class="container section-more-recipes">
+            
+            <div class="list-card-recipes">
+                
+            <div class="card-recipes">
+                <div class="container-img">
+                    <a href="html/Ta.html">
+                    <img src="img/huevo.png" alt="Imagen Receta">
+                    </a>
+                    <p></p>
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="content">
+                    <h3>
+                        Tostadas de aguacate con huevo pochado
+                    </h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            15 minutos
+                        </span>
+                        <span class="category">
+                            <i class="fa-solid fa-utensils"></i>
+                            Desayuno
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-recipes">
+                <div class="container-img">
+                    <a href="html/Tv.html">
+                    <img src="img/tacosveganos.png" alt="Imagen Receta">
+                     </a>
+                    <p></p>
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="content">
+                    <h3>
+                        Tacos veganos de tempeh con salsa de aguacate
+                    </h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            20 minutos
+                        </span>
+                        <span class="category">
+                            <i class="fa-solid fa-utensils"></i>
+                            Vegano
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-recipes">
+                <div class="container-img">
+                    <a href="html/Sbf.html">
+                    <img src="img/tote.png" alt="Imagen Receta">
+                    </a>   
+                    <p></p>
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="content">
+                    <h3>
+                        Smoothie bowl de frutos rojos con granola casera
+                    </h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            10 minutos
+                        </span>
+                        <span class="category">
+                            <i class="fa-solid fa-utensils"></i>
+                            Desayuno
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-recipes">
+                <div class="container-img">
+                    <a href="html/Bcw.html">
+                    <img src="img/brownie.png" alt="Imagen Receta">
+                    </a>
+                    <p></p>
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="content">
+                    <h3>
+                        Brownies de cacao y nueces sin gluten
+                    </h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+                        </span>
+                        <span class="category">
+                            <i class="fa-solid fa-utensils"></i>
+                            Postre
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-recipes">
+                <div class="container-img">
+                    <a href="html/Ev.html">
+                    <img src="img/hola.png" alt="Imagen Receta">
+                     </a>
+                    <p></p>
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="content">
+                    <h3>
+                        Ensalada verde de quinoa con aguacate y limón
+                    </h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            20 minutos
+                        </span>
+                        <span class="category">
+                            <i class="fa-solid fa-utensils"></i>
+                           Ensalada
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-recipes">
+                <div class="container-img">
+                    <a href="html/Bbd.html">
+                    <img src="img/garc.png" alt="Imagen Receta">
+                    </a>
+                    <p></p>
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="content">
+                    <h3>
+                        Buddha bowl con hummus y garbanzos rostizados
+                    </h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            25 minutos
+                        </span>
+                        <span class="category">
+                            <i class="fa-solid fa-utensils"></i>
+                            Vegano
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-recipes">
+                <div class="container-img">
+                    <a href="html/Wp.html">
+                    <img src="img/verde.png" alt="Imagen Receta">
+                    </a>
+                    <p></p>
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="content">
+                    <h3>
+                        Wrap de pollo y espinacas con vinagreta de mostaza
+                    </h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            20 minutos
+                        </span>
+                        <span class="category">
+                            <i class="fa-solid fa-utensils"></i>
+                            Almuerzo
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-recipes">
+                <div class="container-img">
+                    <a href="html/Esa.html">
+                    <img src="img/atun.png" alt="Imagen Receta">
+                     </a>
+                    <p></p>
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="content">
+                    <h3>
+                        Ensalada de atún con pepino y aderezo de tahini
+                    </h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            15 minutos
+                        </span>
+                        <span class="category">
+                            <i class="fa-solid fa-utensils"></i>
+                            Almuerzo
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-recipes">
+                <div class="container-img">
+                    <a href="html/Ga.html">
+                    <img src="img/galletas.png" alt="Imagen Receta">
+                    </a>
+                    <p></p>
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+                <div class="content">
+                    <h3>
+                        Galletas de avena y plátano con chocolate
+                    </h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            20 minutos
+                        </span>
+                        <span class="category">
+                            <i class="fa-solid fa-utensils"></i>
+                            Postre
+                        </span>
+                    </div>
+                </div>
+            </div>
+            </div> 
+        </div>
+       </main>
+       <section class="container section-chef">
+        <div class="content">
+            <h2>
+                Cada uno puede ser chef en su propia cocina
+            </h2>
+            <p>
+                En Cocina Consciente, ser tu propio chef es elegir alimentos saludables y sostenibles que nutran tanto a ti como al planeta. Con recetas fáciles y consejos prácticos, queremos que disfrutes de cocinar de manera consciente, conectando con ingredientes locales y de temporada. Cocina con confianza, experimenta nuevos sabores, y transforma tu alimentación en un acto de cuidado personal y ambiental. ¡Descubre el placer de cocinar saludable y delicioso!
+            </p>
+            <a href="https://chat.whatsapp.com/Ge5jCNPO5xG0e97r2uI8nM">
+            <button class="btn">Aprender más</button>
+            </a>
+        </div>
+        <div class="container-img">
+            <img src="img/cocinera.png" alt="Imagen Chef">
+        </div>
+    </section>
+
+    <section class="section-post-instragram">   
+        <div class="container section-instagram">
+            <h2>
+                Echa un vistazo a @Cocina Consciente en <span>Instagram</span>
+            </h2>
+
+            <p>
+                ¡Únete a nuestra comunidad consciente en Instagram! 🌱 Encuentra recetas saludables, consejos para cuidar tu bienestar y el medio ambiente. ¡Te esperamos! 💚 #CocinaConsciente
+            </p>
+
+            <div class="list-post-instagram">
+                <div class="card-img">
+                    <img src="img/post-instagram-1.png"
+                         alt="post-instagram-1">
+                </div>
+                <div class="card-img">
+                    <img src="img/post-instagram-2.png"
+                         alt="post-instagram-2">
+                </div>
+                <div class="card-img">
+                    <img src="img/post-instagram-3.png"
+                         alt="post-instagram-3">
+                </div>
+                <div class="card-img">
+                    <img src="img/post-instagram-4.png"
+                         alt="post-instagram-4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <div class="container secttion-newsletter">
+        <h2>
+            Delicias en tu correo
+        </h2>
+        <p>
+            ¡Recibe delicias directamente en tu correo! 🍽️✨ Suscríbete y disfruta de recetas saludables, fáciles de hacer y llenas de sabor. ¡No te pierdas lo mejor de Cocina Consciente! 💚 #RecetasConscientes
+        </p>
+
+            <div class="container-input">
+                <input type="email" placeholder="Tu correo electronico">
+                <a href="html/suscripcion.html">
+                <button class="btn">Suscribete</button>
+                </a>
+            </div>
+       </div>
+
+       <footer class="footer">
+        <div class="footer-content">
+          <p>&copy; 2024 Cocina Consciente | Todos los derechos reservados</p>
+        </div>
+        <div class="footer-links">
+          <a href="html/nosotros.html">Acerca de</a>
+          <a href="https://chat.whatsapp.com/EEtCfvVUCaT5TeyKlE0v45">Contacto</a>
+          <a href="#privacidad">Política de Privacidad</a>
+        </div>
+        <div class="footer-socials">
+          <p>¡Síguenos en nuestras redes sociales!</p>
+          <a href="https://www.facebook.com" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com" target="_blank">Instagram</a>
+          <a href="https://www.twitter.com" target="_blank">Twitter</a>
+        </div>
+      </footer>
+        <script src="js/index.js" defer></script>
+    </body>
 </html>
-        
